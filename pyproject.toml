@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "proglangs"
 version = "0.1.0"
-description = ""
+description = "Pet Project ProgLangs"
 authors = ["Andrey <reygofor@gmail.com>"]
 readme = "README.md"
 
