@@ -17,11 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 
 # имрорт функций предсталвения
-# from pl.views import *
+from pl.views import *
 
 # добавление марштура
 urlpatterns = [
     path('admin/', admin.site.urls),
     # передаем путь к файлу, который будет содержать маршруты приложения
-    path('pl/', include('pl.urls')),
+    path('', include('pl.urls')),
 ]
+
+handler404 = pageNotFound
