@@ -11,3 +11,4 @@ coverage.xml
 .vim
 notes/
 *.code-workspace
+proglangs/.env
