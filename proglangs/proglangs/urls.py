@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static
 
 # имрорт функций предсталвения
 from pl.views import *
+from proglangs import settings
 
 # добавление марштура
 urlpatterns = [
@@ -25,5 +27,8 @@ urlpatterns = [
     # передаем путь к файлу, который будет содержать маршруты приложения
     path('', include('pl.urls')),
 ]
+
+if settings.DEBUG:
+	urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = pageNotFound
